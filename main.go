@@ -6,7 +6,11 @@ import (
 )
 
 func main() {
-	fmt.Println("Program: ", os.Args[0])
-	fmt.Println("All args: ", os.Args)
-	fmt.Println("Number of arguments: ", len(os.Args))
+	if len(os.Args) < 2 {
+		fmt.Fprintln(os.Stderr, "usage: go-hello-cli <name>")
+		os.Exit(1)
+	}
+
+	name := os.Args[1]
+	fmt.Printf("Hello, %s!\n", name)
 }
