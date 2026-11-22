@@ -1,0 +1,15 @@
+# Binaries
+go-hello-cli
+/bin/
+*.exe
+
+# Test artifacts
+*.test
+*.out
+coverage.*
+
+# Secrets
+.env
+
+# macOS
+.DS_Store
