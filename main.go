@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/Olamilekan-12/go-hello-cli/greet"
 )
 
 func main() {
@@ -12,10 +14,6 @@ func main() {
 	}
 
 	for _, name := range os.Args[1:] {
-		fmt.Println(greet(name))
+		fmt.Println(greet.Greet(name))
 	}
-}
-
-func greet(name string) string {
-	return fmt.Sprintf("Hello, %s!", name)
 }
