@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	fmt.Println("Hello from hello-cli!")
+	fmt.Println("Program: ", os.Args[0])
+	fmt.Println("All args: ", os.Args)
+	fmt.Println("Number of arguments: ", len(os.Args))
 }
