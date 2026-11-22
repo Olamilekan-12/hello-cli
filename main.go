@@ -12,6 +12,10 @@ func main() {
 	}
 
 	for _, name := range os.Args[1:] {
-		fmt.Printf("Hello, %s!\n", name)
+		fmt.Println(greet(name))
 	}
+}
+
+func greet(name string) string {
+	return fmt.Sprintf("Hello, %s!", name)
 }
