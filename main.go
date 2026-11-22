@@ -7,10 +7,11 @@ import (
 
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Fprintln(os.Stderr, "usage: go-hello-cli <name>")
+		fmt.Fprintln(os.Stderr, "usage: go-hello-cli <name> [name...]")
 		os.Exit(1)
 	}
 
-	name := os.Args[1]
-	fmt.Printf("Hello, %s!\n", name)
+	for _, name := range os.Args[1:] {
+		fmt.Printf("Hello, %s!\n", name)
+	}
 }
